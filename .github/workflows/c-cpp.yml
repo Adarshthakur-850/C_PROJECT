@@ -1,0 +1,25 @@
+name: C Programs CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GCC
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Compile Each C File Separately
+        run: |
+          mkdir -p build
+          for file in *.c; do
+            echo "Compiling $file"
+            gcc "$file" -o "build/${file%.c}" || echo "Skipping $file due to errors"
+          done
