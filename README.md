@@ -1,8 +1,3 @@
-Here’s a **professional `README.md`** tailored for your C_PROJECT repository on GitHub. It explains the purpose, how to use the project, what’s inside, and how others can explore or contribute to it — following best practices for GitHub READMEs. ([freecodecamp.org][1])
-
----
-
-```markdown
 # C_PROJECT
 
 A collection of classic C programming projects demonstrating core concepts of the C language, including basic algorithms, control structures, file handling, and interactive applications.  
